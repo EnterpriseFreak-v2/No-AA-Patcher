@@ -3,7 +3,7 @@
 (If you want to see how an No-AA patched twilight princess compares to an unmodified one, please take a look at the preview.png file!)
 
 Removes anti-aliasing from your favourite Wii games!
-1) Unpack your game using Wiimms ISO Tools (wit extract <yourwbfs> <yourdirectory>)
+1) Unpack your game using Wiimms ISO Tools (wit extract "yourwbfs" "yourdirectory")
 2) Drag and drop the main.dol onto the No-AA-Patcher.exe file! (the main.dol is located in yourdirectory\DATA\sys)
 3) Replace the original main.dol file with the patched.dol the program has created for you.
 4) Repack your game using WIT (wit copy <yourdirectory> <yourwbfs.wbfs>)
