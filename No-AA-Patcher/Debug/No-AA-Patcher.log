@@ -1,0 +1,5 @@
+﻿  main.c
+C:\Users\Kevin\source\repos\No-AA-Patcher\No-AA-Patcher\main.c(44,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Kevin\source\repos\No-AA-Patcher\No-AA-Patcher\main.c(51,11): warning C4477: 'printf' : format string '%lx' requires an argument of type 'unsigned long', but variadic argument 1 has type 'uint8_t *'
+C:\Users\Kevin\source\repos\No-AA-Patcher\No-AA-Patcher\main.c(14,12): warning C4101: 'items': unreferenced local variable
+  No-AA-Patcher.vcxproj -> C:\Users\Kevin\source\repos\No-AA-Patcher\Debug\No-AA-Patcher.exe
