@@ -1,20 +1,31 @@
 # No-AA-Patcher
+Removes the anti-aliasing / softening filter from your favourite Wii games! 
+Have you ever noticed how some Wii games just look horribly blury even playing using component cables or an HDMI mod? You can thank the "anti-aliasing" / softener filter of the Wii for that. The purpose of this filter is to prevent "hard" jumps when playing in an interlaced (480i, 576i) video mode by mashing together mutliple lines before outputting them. For some reason however, this filter is still active even playing while outputting a progressive 480p signal on a lot of games. No-AA-Patcher removes the calls to the "aa" / "soft" progressive rmode and replaces them with the "normal" progressive rmode resulting in a much cleaner image (look at the preview.png file, if you want to see the difference). 
 
-(If you want to see how an No-AA patched twilight princess compares to an unmodified one, please take a look at the preview.png file!)
+## Ways to patch you game
+There are two ways to patch your game. Method #1 is to patch the entire ISO/WBFS, method #2 is to just patch the main.dol and then load it using the alternate dol feature of for example USB Loader GX. The choice of what method to use is up to you. Both methods work great.
 
-Removes anti-aliasing from your favourite Wii games!
-1) Unpack your game using Wiimms ISO Tools (wit extract "yourwbfs" "yourdirectory")
-2) Drag and drop the main.dol onto the No-AA-Patcher.exe file! (the main.dol is located in yourdirectory\DATA\sys)
-3) Replace the original main.dol file with the patched.dol the program has created for you.
-4) Repack your game using WIT (wit copy <yourdirectory> <yourwbfs.wbfs>)
-5) Copy the wbfs you've just packed into the folder of the game, replacing your original wbfs!
-6) ???
-7) Enjoy better graphics! 
-  
-(There's no need to do this for wbfs files that you intend to play using Dolphin, Dolphin does not emulate the anti-aliasing effect)
-  
-## Todo
+## Patching your game (Method 1)
+Before you start, please make sure that you already have WIT (Wiimm's ISO Tools) installed, if not get it on [Wiimm's website](https://wit.wiimm.de/download.html).
 
-[ ] Improve the code
-[ ] Improve the readme
-[ ] ???
+*When using this method you'll have to replace the entire WBFS/ISO on your storage media with the patched one, if you want to patch the main.dol on-the-fly please skip this section and read __Patching your game (Method 2)__*
+1) Unpack your game using WIT (``wit extract <your wbfs/iso> <folder>``)
+2) Run No-AA-Patcher on the main.dol of the game to get a patched.dol file (``No-AA-Patcher.exe <folder\DATA\sys\main.dol``)
+3) Replace the main.dol of the game with the patched.dol you've just got. (You got this one :D)
+4) Repack the game using wit (``wit copy <folder> <patched.wbfs>``)
+5) Replace your original ISO/WBFS with the one you've packed using wit.
+6) Enjoy your game in much higher quality!
+
+
+## Patching your game (Method 2)
+Before you start, please make sure that you already have WIT (Wiimm's ISO Tools) installed, if not get it on [Wiimm's website](https://wit.wiimm.de/download.html).
+
+1) Unpack your game using WIT (``wit extract <your wbfs/iso> <folder>``)
+2) Run No-AA-Patcher on the main.dol of the game to get a patched.dol file (``No-AA-Patcher.exe <folder\DATA\sys\main.dol``)
+3) Copy the patched.dol to the root of your SD card.
+4) Rename the patched.dol on the SD Card to the ID6 of your game*
+5) Boot USB Loader GX, click on the game, settings, Game Load and set Alternate DOL to "Load From SD/USB", then click on save.
+6) Run the game, if you did everything right the game will now load with your patched DOL!
+7) Enjoy your game in much higher quality!
+
+* : Usually, the ID6 of the game is equal to the filename of the WBFS. 
